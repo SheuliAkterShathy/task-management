@@ -114,7 +114,7 @@ const Navbar = () => {
 
                                     <form  onSubmit={handleSubmit} >
                                    <div className='flex'>
-                                   <input id="task" type="text" name='task' placeholder="Enter your task" className="w-full text-center rounded-md focus:ring focus:ring-violet-400 p-3" />
+                                   <input id="task" type="text" name='task' placeholder="Enter your task" className="w-36 text-center rounded-md focus:ring focus:ring-violet-400" />
                                    
 
                                    <div>

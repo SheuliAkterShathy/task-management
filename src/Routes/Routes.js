@@ -5,6 +5,7 @@ import Login from "../Componets/Login";
 import Media from "../Componets/Media";
 import MyTask from "../Componets/MyTask";
 import Register from "../Componets/Register";
+import UpdatedTask from "../Componets/UpdatedTask";
 import Main from "../Layout/Main";
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -29,6 +30,14 @@ const router = createBrowserRouter([
         {
             path: '/completed-task',
             element: <CompletedTask></CompletedTask>
+        },
+        {
+            path: '/updated-task/:id',
+            element: <UpdatedTask></UpdatedTask>,
+            loader: ({ params }) =>
+          fetch(
+            `http://localhost:5000/updated-task/${params.id}`
+          ),
         },
         {
             path: '/login',

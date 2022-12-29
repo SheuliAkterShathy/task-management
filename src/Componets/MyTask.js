@@ -63,7 +63,7 @@ const MyTask = () => {
                         tasks?.map((task, i) => <tr key={task?._id}>
                             <td>{i + 1}</td>
                             <td>{task?.task}</td>
-                            <td><button className='bg-sky-300 px-2 rounded-md hover:bg-sky-200'>Update</button></td>
+                            <td><Link to={`/updated-task/${task?._id}`}><button className='bg-sky-300 px-2 rounded-md hover:bg-sky-200'>Update</button></Link></td>
                             <td><button  onClick={() => handleDelete(task?._id)} className='bg-red-300 px-2 rounded-md hover:bg-red-200'>Delete</button></td>
                             <td><Link to='/completed-task'><button className='bg-sky-300 px-2 rounded-md hover:bg-sky-200'>Complete</button></Link></td>
                             
