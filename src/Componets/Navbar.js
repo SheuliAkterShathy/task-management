@@ -29,7 +29,7 @@ const Navbar = () => {
           };
 
           fetch(
-            "http://localhost:5000/tasks",
+            "https://task-management-server-sheuliaktershathy.vercel.app/tasks",
             {
               method: "POST",
               headers: {
@@ -107,6 +107,9 @@ const Navbar = () => {
                             <li className="text-white hover:text-indigo-200">
                                 <Link to='/'>Home</Link>
                             </li>
+                            <li className="text-white hover:text-indigo-200">
+                                <Link to='/blog'>Blog</Link>
+                            </li>
                             {
                                 user?.uid?
                                  <>
@@ -118,7 +121,7 @@ const Navbar = () => {
                                    
 
                                    <div>
-                            <button type="submit" className="w-12 p-3 font-semibold rounded-full bg-sky-300 hover:bg-sky-200">+</button>
+                            <button type="submit" className="w-10 p-3 font-semibold rounded-full bg-sky-300 hover:bg-sky-200">+</button>
                             
                        </div>
                                    </div>
@@ -145,12 +148,7 @@ const Navbar = () => {
                         </ul>
 
                         <div className="mt-3 space-y-2 lg:hidden md:inline-block">
-                    {/* <a
-                        href="javascript:void(0)"
-                        className="inline-block w-full px-4 py-2 text-center text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
-                    >
-                        Sign in
-                    </a> */}
+                   
                     {
                         user?.uid ?
                          <>

@@ -1,4 +1,5 @@
 import AddTask from "../Componets/AddTask";
+import Blog from "../Componets/Blog";
 import CompletedTask from "../Componets/CompletedTask";
 import Home from "../Componets/Home";
 import Login from "../Componets/Login";
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
            element: <Home></Home>
         },
         {
+           path: '/blog',
+           element: <Blog></Blog>
+        },
+        {
             path: '/add-task',
             element: <AddTask></AddTask>
         },
@@ -36,7 +41,7 @@ const router = createBrowserRouter([
             element: <UpdatedTask></UpdatedTask>,
             loader: ({ params }) =>
           fetch(
-            `http://localhost:5000/updated-task/${params.id}`
+            `https://task-management-server-sheuliaktershathy.vercel.app/updated-task/${params.id}`
           ),
         },
         {

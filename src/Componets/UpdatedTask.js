@@ -17,7 +17,7 @@ const UpdatedTask = () => {
           };
 
           fetch(
-            `http://localhost:5000/update/${data?._id}`,
+            `https://task-management-server-sheuliaktershathy.vercel.app/update/${data?._id}`,
             {
               method: "PATCH",
               headers: {
